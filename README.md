@@ -1,20 +1,23 @@
-# Getting Started with Create React App
+# Getting Started with this partnr Repo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To start this project
 
-In the project directory, you can run:
+First clone this repo to your local machine and run commands:
 
+### `npm install`
+        
 ### `npm start`
 
-Runs the app in the development mode.\
+This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Happy contributing ✌️
 
-### `npm test`
+## Fews things you need to know before you start contributing
+
+### `npm test` to run tests after your contributions
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
@@ -25,22 +28,18 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## VScode extensions
 
-### `npm run eject`
+| Extensions  | Links |
+| ------------- |:-------------:|
+| ES7 React/Redux/GraphQL/React-Native snippets      | https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets     |
+| Prettier – Code formatted      | https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode     |
+| Highlight Matching Tag     | https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag     |
+| VSCode React Refactor      | https://marketplace.visualstudio.com/items?itemName=planbcoding.vscode-react-refactor     |
+| ESLint      | https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint     |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## partnr basic style guides
+► Use camelcase or dash(-) when naming variables, styles or folders
+► Github: always make sure you're creating a new branch for every feature  you building.
