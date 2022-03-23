@@ -14,35 +14,51 @@ const Register: FC<RegisterProps> = () => (
                     on Partnr
                 </p>
             </div>
-            <form action="">
+            <form action="" className="form">
                 <div className="box-select">
-                    <div className="bob-select-talent">
-                        <input
-                            type="radio"
-                            id="talent"
-                            name="join-partnr"
-                            value="TALENT"
-                        />
-                        <label htmlFor="talent">Talent</label>
-                    </div>
-                    <div className="bob-select-company">
-                        <input
-                            type="radio"
-                            id="company"
-                            name="join-partnr"
-                            value="COMPANY"
-                        />
-                        <label htmlFor="company">Company</label>
-                    </div>
-                    <div className="bob-select-creator">
-                        <input
-                            type="radio"
-                            id="creator"
-                            name="join-partnr"
-                            value="CREATOR"
-                        />
-                        <label htmlFor="creator">Creator</label>
-                    </div>
+                    <input
+                        type="radio"
+                        id="talent"
+                        name="join-partnr"
+                        value="TALENT"
+                        defaultChecked
+                    />
+                    <label htmlFor="talent">
+                        <div className="box-select-group">
+                            <div className="green-box"></div>
+                            <div className="image-box"></div>
+                            <h4>Join as talent</h4>
+                            <p>Take courses, grow, participate in bounties</p>
+                        </div>
+                    </label>
+                    <input
+                        type="radio"
+                        id="company"
+                        name="join-partnr"
+                        value="COMPANY"
+                    />
+                    <label htmlFor="company">
+                        <div className="box-select-group">
+                            <div className="green-box"></div>
+                            <div className="image-box"></div>
+                            <h4>Join as Web3 company</h4>
+                            <p>Create bounties and tasks for talents</p>
+                        </div>
+                    </label>
+                    <input
+                        type="radio"
+                        id="creator"
+                        name="join-partnr"
+                        value="CREATOR"
+                    />
+                    <label htmlFor="creator">
+                        <div className="box-select-group">
+                            <div className="green-box"></div>
+                            <div className="image-box"></div>
+                            <h4>Join as creator</h4>
+                            <p>Create bounties and tasks for talents</p>
+                        </div>
+                    </label>
                 </div>
                 <div className="actions">
                     <button>Continue</button>
