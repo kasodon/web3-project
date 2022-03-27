@@ -15,7 +15,7 @@ function Register() {
     return (
         <div className="Register" data-testid="Register">
             <div className="register-box">
-                <div className="header">
+                <div className="register-header">
                     <h1>Welcome to Partnr</h1>
                     <p>
                         Hey there! welcome to Partnr. Here you can learn, earn,

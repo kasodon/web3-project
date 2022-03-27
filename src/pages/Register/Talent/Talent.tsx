@@ -26,7 +26,7 @@ const Talent: FC<TalentProps> = () => (
                     </span>
                 </Link>
             </div>
-            <div className="header">
+            <div className="talen-header">
                 <h1>Register as talent</h1>
                 <p>
                     Provide the necessary details to verify you as a talent and

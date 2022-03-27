@@ -26,7 +26,7 @@ const Creator: FC<CreatorProps> = () => (
                     </span>
                 </Link>
             </div>
-            <div className="header">
+            <div className="creator-header">
                 <h1>Register as creator</h1>
                 <p>
                     Provide the necessary details to verify you as a creator and

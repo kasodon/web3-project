@@ -26,7 +26,7 @@ const DAO: FC<DAOProps> = () => (
                     </span>
                 </Link>
             </div>
-            <div className="header">
+            <div className="dao-header">
                 <h1>Register as Web3 company</h1>
                 <p>
                     Provide the necessary details to verify you as a DAO and
