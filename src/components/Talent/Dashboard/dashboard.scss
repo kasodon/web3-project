@@ -1,0 +1,135 @@
+.dashboard {
+    padding: 2rem 4rem;
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {}
+        .dashboard-header-actions {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            button {
+                background-color: #ffffff;
+                color: #444444;
+                border-radius: 30px;
+                font-weight: 700;
+                padding: 1rem 1.5rem;
+                font-size: 14px;
+                margin: .7rem;
+                border: 1px solid #444444;
+                &.create-avatar {
+                    background: linear-gradient(92.06deg, #CD677F 28.43%, #05E8DA 127.81%);
+                    border: none;
+                    color: #ffffff;
+                }
+                &.delete-avatar {
+                    border: none;
+                    background: #FFE7E7;
+                    border-radius: 100%;
+                    padding: .8rem;
+                }
+            }
+        }
+    }
+    .dashboard-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: #05E8DA;
+        .dashboard-body-profile {
+            width: 33%;
+            background: yellow;
+            height: 1000px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            .profile-card {
+                height: 484px;
+                width: 370px;
+                background: #ffffff;
+                box-sizing: border-box;
+                border-radius: 30px;
+                margin-bottom: 4rem;
+                .background-cover {
+                    height: 38%;
+                    background: url('./../../../assets/images/profile_overlay.png');
+                    background-size: cover;
+                    background-position: center;
+                    border-top-left-radius: 30px;
+                    border-top-right-radius: 30px;
+                }
+                .profile-card-image {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: -3.6rem;
+                    img {
+                        width: 111px;
+                        height: 111px;
+                    }
+                }
+                .card-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    h3 {
+                        font-weight: 600;
+                        font-size: 29px;
+                        text-transform: capitalize;
+                        margin-bottom: none;
+                    }
+                    .userTag {
+                        font-weight: 500;
+                        font-size: 19px;
+                        color: #989797;
+                        margin-top: -.6rem;
+                    }
+                    a {
+                        font-weight: 700;
+                        background: #D3FCBA;
+                        color: #208C05;
+                        font-size: 10px;
+                        text-decoration: none;
+                        border-radius: 30px;
+                        padding: .7rem 1.4rem;
+                        margin-bottom: .9rem;
+                    }
+                    .verifyTag {
+                        font-weight: 700;
+                        font-size: 12px;
+                        color: #CBC2C2;
+                        background: #F9F9F9;
+                        border-radius: 5px;
+                        padding: .7rem 1.9rem;
+                    }
+                }
+            }
+            .avatar-card {
+                width: 370px;
+                height: 472px;
+                background: #FFFFFF;
+                border: 2px solid #FCF3F3;
+                border-radius: 30px;
+                .avatar-card-header  {
+                    border-bottom: 2px solid #FCF3F3;
+                    display: flex;
+                    justify-content: flex-start;
+                    h3 {
+                        font-weight: 600;
+                        font-size: 25px;
+                        margin-bottom: none;
+                    }
+                }
+            }
+        }
+        .dashboard-body-data {
+            width: 63%;
+            background: grey;
+            height: 1000px;
+        }
+    }
+}
