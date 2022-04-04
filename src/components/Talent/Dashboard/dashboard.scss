@@ -24,7 +24,14 @@
                 &.create-avatar {
                     background: linear-gradient(92.06deg, #CD677F 28.43%, #05E8DA 127.81%);
                     border: none;
+                    color: #fdfdfd;
+                    font-weight: 900;
+                }
+                &.create-profile {
+                    background: linear-gradient(92.06deg, #CD677F 28.43%, #05E8DA 127.81%);
+                    border: none;
                     color: #ffffff;
+                    font-weight: 900;
                 }
                 &.delete-avatar {
                     border: none;
@@ -120,14 +127,20 @@
                 border-radius: 30px;
                 .avatar-card-header  {
                     border-bottom: 1px solid #EAEAEA;
-                    // display: flex;
-                    // justify-content: center;
-                    padding-left: 3rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 1.8rem;
+                    padding-right: 1.8rem;
                     padding-bottom: 0.8rem;
                     h3 {
                         font-weight: 700;
                         font-size: 25px;
                         margin-bottom: -0.1px;
+                        color: #555555;
+                    }
+                    .tool-tip {
+                        margin-bottom: -20.4px;
                     }
                 }
                 .avatar-card-body {
@@ -139,7 +152,7 @@
                     .avatar-card-body-item {
                         display: flex;
                         flex-direction: row;
-                        justify-content: space-evenly;
+                        justify-content: space-around;
                         align-items: center;
                         margin: .5rem 0;
                         img {
@@ -416,7 +429,7 @@
 
 .delete-avatar {
     border: none;
-    background: #FFE7E7;
-    border-radius: 100%;
+    // background: #d4efdf;
+    border-radius: 50%;
     padding: .8rem;
 }

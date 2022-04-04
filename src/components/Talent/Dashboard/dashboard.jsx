@@ -1,18 +1,34 @@
-// import React, { useState } from 'react';
+import * as React from 'react'
 // import { Link } from 'react-router-dom';
+import DeleteIcon from '@mui/icons-material/Delete'
+import Settings from '@mui/icons-material/Settings'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
+import IconButton from '@mui/material/IconButton'
+import Tooltip from '@mui/material/Tooltip'
 import './dashboard.scss'
 import cardImg from './../../../assets/images/profile_pic.png'
 
 function Dashboard() {
+    const [anchorEl, setAnchorEl] = React.useState(null)
+    const open = Boolean(anchorEl)
+    const handleClick = event => {
+        setAnchorEl(event.currentTarget)
+    }
+    const handleClose = () => {
+        setAnchorEl(null)
+    }
     return (
         <div className="dashboard">
             <div className="dashboard-header">
                 <h1>Dashboard</h1>
                 <div className="dashboard-header-actions">
-                    <button>Switch Avatar</button>
-                    <button>On-chain Profile</button>
-                    <button className="create-avatar">Create Avatar</button>
-                    <button className="delete-avatar">
+                    {/* <button>Switch Avatar</button> */}
+                    <button className="create-profile">On-chain Profile</button>
+                    {/* <button className="create-avatar">Create Avatar</button> */}
+                    {/* <button className="delete-avatar">
                         <svg
                             width="21"
                             height="21"
@@ -25,7 +41,7 @@ function Dashboard() {
                                 fill="#D10000"
                             />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
             </div>
             <div className="dashboard-body">
@@ -47,6 +63,19 @@ function Dashboard() {
                     <div className="avatar-card">
                         <div className="avatar-card-header">
                             <h3>Avatars</h3>
+                            <div className="tool-tip">
+                                <Tooltip
+                                    title="Create New Avatar"
+                                    placement="top-start"
+                                    arrow
+                                >
+                                    <IconButton>
+                                        <AddCircleOutlinedIcon
+                                            sx={{ fontSize: 32 }}
+                                        />
+                                    </IconButton>
+                                </Tooltip>
+                            </div>
                         </div>
                         <div className="avatar-card-body">
                             <div className="avatar-card-body-item">
@@ -55,20 +84,75 @@ function Dashboard() {
                                     <h4>Johnson DAO</h4>
                                     <p>Design</p>
                                 </div>
-                                <button className="delete-avatar">
-                                    <svg
-                                        width="21"
-                                        height="21"
-                                        viewBox="0 0 21 21"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                <div className="">
+                                    <Tooltip
+                                        title="Configure Avatar"
+                                        placement="top-start"
+                                        arrow
                                     >
-                                        <path
-                                            d="M4.04557 6.95166H17.3789V17.785C17.3789 18.006 17.2911 18.218 17.1348 18.3743C16.9785 18.5305 16.7666 18.6183 16.5456 18.6183H4.87891C4.65789 18.6183 4.44593 18.5305 4.28965 18.3743C4.13337 18.218 4.04557 18.006 4.04557 17.785V6.95166ZM5.71224 8.61833V16.9517H15.7122V8.61833H5.71224ZM8.21224 10.285H9.87891V15.285H8.21224V10.285ZM11.5456 10.285H13.2122V15.285H11.5456V10.285ZM6.54557 4.45166V2.78499C6.54557 2.56398 6.63337 2.35202 6.78965 2.19574C6.94593 2.03946 7.15789 1.95166 7.37891 1.95166H14.0456C14.2666 1.95166 14.4785 2.03946 14.6348 2.19574C14.7911 2.35202 14.8789 2.56398 14.8789 2.78499V4.45166H19.0456V6.11833H2.37891V4.45166H6.54557ZM8.21224 3.61833V4.45166H13.2122V3.61833H8.21224Z"
-                                            fill="#D10000"
-                                        />
-                                    </svg>
-                                </button>
+                                        <IconButton
+                                            onClick={handleClick}
+                                            aria-controls={
+                                                open
+                                                    ? 'account-menu'
+                                                    : undefined
+                                            }
+                                            aria-haspopup="true"
+                                            aria-expanded={
+                                                open ? 'true' : undefined
+                                            }
+                                        >
+                                            <MoreVertIcon
+                                                sx={{ fontSize: 34 }}
+                                            />
+                                        </IconButton>
+                                    </Tooltip>
+                                </div>
+                                <Menu
+                                    anchorEl={anchorEl}
+                                    id="avatar-menu"
+                                    open={open}
+                                    onClose={handleClose}
+                                    onClick={handleClose}
+                                    PaperProps={{
+                                        elevation: 0,
+                                        sx: {
+                                            overflow: 'visible',
+                                            filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                                            mt: 1.5,
+                                            '&:before': {
+                                                content: '""',
+                                                display: 'block',
+                                                position: 'absolute',
+                                                top: 0,
+                                                right: 14,
+                                                width: 10,
+                                                height: 10,
+                                                bgcolor: 'background.paper',
+                                                transform:
+                                                    'translateY(-50%) rotate(45deg)',
+                                                zIndex: 0,
+                                            },
+                                        },
+                                    }}
+                                    transformOrigin={{
+                                        horizontal: 'right',
+                                        vertical: 'top',
+                                    }}
+                                    anchorOrigin={{
+                                        horizontal: 'right',
+                                        vertical: 'bottom',
+                                    }}
+                                >
+                                    <MenuItem sx={{ padding: 2 }}>
+                                        <Settings sx={{ mr: 1 }} /> Configure
+                                        Avatar
+                                    </MenuItem>
+                                    <MenuItem sx={{ padding: 2 }}>
+                                        <DeleteIcon sx={{ mr: 1 }} /> Delete
+                                        Avatar
+                                    </MenuItem>
+                                </Menu>
                             </div>
                             <div className="avatar-card-body-item">
                                 <img src={cardImg} alt="" />
@@ -76,20 +160,30 @@ function Dashboard() {
                                     <h4>Johnson DAO</h4>
                                     <p>Design</p>
                                 </div>
-                                <button className="delete-avatar">
-                                    <svg
-                                        width="21"
-                                        height="21"
-                                        viewBox="0 0 21 21"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                <div className="">
+                                    <Tooltip
+                                        title="Configure Avatar"
+                                        placement="top-start"
+                                        arrow
                                     >
-                                        <path
-                                            d="M4.04557 6.95166H17.3789V17.785C17.3789 18.006 17.2911 18.218 17.1348 18.3743C16.9785 18.5305 16.7666 18.6183 16.5456 18.6183H4.87891C4.65789 18.6183 4.44593 18.5305 4.28965 18.3743C4.13337 18.218 4.04557 18.006 4.04557 17.785V6.95166ZM5.71224 8.61833V16.9517H15.7122V8.61833H5.71224ZM8.21224 10.285H9.87891V15.285H8.21224V10.285ZM11.5456 10.285H13.2122V15.285H11.5456V10.285ZM6.54557 4.45166V2.78499C6.54557 2.56398 6.63337 2.35202 6.78965 2.19574C6.94593 2.03946 7.15789 1.95166 7.37891 1.95166H14.0456C14.2666 1.95166 14.4785 2.03946 14.6348 2.19574C14.7911 2.35202 14.8789 2.56398 14.8789 2.78499V4.45166H19.0456V6.11833H2.37891V4.45166H6.54557ZM8.21224 3.61833V4.45166H13.2122V3.61833H8.21224Z"
-                                            fill="#D10000"
-                                        />
-                                    </svg>
-                                </button>
+                                        <IconButton
+                                            onClick={handleClick}
+                                            aria-controls={
+                                                open
+                                                    ? 'account-menu'
+                                                    : undefined
+                                            }
+                                            aria-haspopup="true"
+                                            aria-expanded={
+                                                open ? 'true' : undefined
+                                            }
+                                        >
+                                            <MoreVertIcon
+                                                sx={{ fontSize: 34 }}
+                                            />
+                                        </IconButton>
+                                    </Tooltip>
+                                </div>
                             </div>
                             <div className="avatar-card-body-item">
                                 <img src={cardImg} alt="" />
@@ -97,20 +191,30 @@ function Dashboard() {
                                     <h4>Johnson DAO</h4>
                                     <p>Design</p>
                                 </div>
-                                <button className="delete-avatar">
-                                    <svg
-                                        width="21"
-                                        height="21"
-                                        viewBox="0 0 21 21"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                <div className="">
+                                    <Tooltip
+                                        title="Configure Avatar"
+                                        placement="top-start"
+                                        arrow
                                     >
-                                        <path
-                                            d="M4.04557 6.95166H17.3789V17.785C17.3789 18.006 17.2911 18.218 17.1348 18.3743C16.9785 18.5305 16.7666 18.6183 16.5456 18.6183H4.87891C4.65789 18.6183 4.44593 18.5305 4.28965 18.3743C4.13337 18.218 4.04557 18.006 4.04557 17.785V6.95166ZM5.71224 8.61833V16.9517H15.7122V8.61833H5.71224ZM8.21224 10.285H9.87891V15.285H8.21224V10.285ZM11.5456 10.285H13.2122V15.285H11.5456V10.285ZM6.54557 4.45166V2.78499C6.54557 2.56398 6.63337 2.35202 6.78965 2.19574C6.94593 2.03946 7.15789 1.95166 7.37891 1.95166H14.0456C14.2666 1.95166 14.4785 2.03946 14.6348 2.19574C14.7911 2.35202 14.8789 2.56398 14.8789 2.78499V4.45166H19.0456V6.11833H2.37891V4.45166H6.54557ZM8.21224 3.61833V4.45166H13.2122V3.61833H8.21224Z"
-                                            fill="#D10000"
-                                        />
-                                    </svg>
-                                </button>
+                                        <IconButton
+                                            onClick={handleClick}
+                                            aria-controls={
+                                                open
+                                                    ? 'account-menu'
+                                                    : undefined
+                                            }
+                                            aria-haspopup="true"
+                                            aria-expanded={
+                                                open ? 'true' : undefined
+                                            }
+                                        >
+                                            <MoreVertIcon
+                                                sx={{ fontSize: 34 }}
+                                            />
+                                        </IconButton>
+                                    </Tooltip>
+                                </div>
                             </div>
                             <div className="avatar-card-body-item">
                                 <img src={cardImg} alt="" />
@@ -118,20 +222,30 @@ function Dashboard() {
                                     <h4>Johnson DAO</h4>
                                     <p>Design</p>
                                 </div>
-                                <button className="delete-avatar">
-                                    <svg
-                                        width="21"
-                                        height="21"
-                                        viewBox="0 0 21 21"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                <div className="">
+                                    <Tooltip
+                                        title="Configure Avatar"
+                                        placement="top-start"
+                                        arrow
                                     >
-                                        <path
-                                            d="M4.04557 6.95166H17.3789V17.785C17.3789 18.006 17.2911 18.218 17.1348 18.3743C16.9785 18.5305 16.7666 18.6183 16.5456 18.6183H4.87891C4.65789 18.6183 4.44593 18.5305 4.28965 18.3743C4.13337 18.218 4.04557 18.006 4.04557 17.785V6.95166ZM5.71224 8.61833V16.9517H15.7122V8.61833H5.71224ZM8.21224 10.285H9.87891V15.285H8.21224V10.285ZM11.5456 10.285H13.2122V15.285H11.5456V10.285ZM6.54557 4.45166V2.78499C6.54557 2.56398 6.63337 2.35202 6.78965 2.19574C6.94593 2.03946 7.15789 1.95166 7.37891 1.95166H14.0456C14.2666 1.95166 14.4785 2.03946 14.6348 2.19574C14.7911 2.35202 14.8789 2.56398 14.8789 2.78499V4.45166H19.0456V6.11833H2.37891V4.45166H6.54557ZM8.21224 3.61833V4.45166H13.2122V3.61833H8.21224Z"
-                                            fill="#D10000"
-                                        />
-                                    </svg>
-                                </button>
+                                        <IconButton
+                                            onClick={handleClick}
+                                            aria-controls={
+                                                open
+                                                    ? 'account-menu'
+                                                    : undefined
+                                            }
+                                            aria-haspopup="true"
+                                            aria-expanded={
+                                                open ? 'true' : undefined
+                                            }
+                                        >
+                                            <MoreVertIcon
+                                                sx={{ fontSize: 34 }}
+                                            />
+                                        </IconButton>
+                                    </Tooltip>
+                                </div>
                             </div>
                         </div>
                     </div>
