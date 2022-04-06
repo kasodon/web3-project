@@ -1,10 +1,19 @@
+import * as React from 'react'
 // Main pages import
-import Dashboard from './../components/Talent/Dashboard/dashboard'
-import Update from './../components/Talent/Update/update'
-import Welcome from './../components/Talent/Welcome/welcome'
-import Learn from './../components/Talent/Learn/learn'
-import CourseIntro from './../components/Talent/Course-Intro/Course-Intro'
-import CourseModule from './../components/Talent/Course-Module/course-module'
+const Dashboard = React.lazy(
+    () => import('./../components/Talent/Dashboard/dashboard'),
+)
+const Update = React.lazy(() => import('./../components/Talent/Update/update'))
+const Welcome = React.lazy(
+    () => import('./../components/Talent/Welcome/welcome'),
+)
+const Learn = React.lazy(() => import('./../components/Talent/Learn/learn'))
+const CourseIntro = React.lazy(
+    () => import('./../components/Talent/Course-Intro/Course-Intro'),
+)
+const CourseModule = React.lazy(
+    () => import('./../components/Talent/Course-Module/course-module'),
+)
 
 var talentRoutes = [
     { path: 'dashboard', name: 'Talent Dashboard', component: <Dashboard /> },

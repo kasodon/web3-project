@@ -29,11 +29,15 @@
                 justify-content: space-evenly;
                 align-items: center;
                 li {
-                    text-decoration: none;
+                    // text-decoration: none;
                     list-style: none;
-                    font-weight: 700;
-                    font-size: 15px;
-                    text-transform: capitalize;
+                    a {
+                        color: #ffffff;
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: 15px;
+                        text-transform: capitalize;
+                    }
                 }
             }
         }
