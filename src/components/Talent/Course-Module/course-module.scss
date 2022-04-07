@@ -77,6 +77,43 @@
             margin-bottom: 1.3rem;
         }
     }
+    .section-module-cta {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #242424;
+        border-radius: 30px;
+        padding: 3rem 7rem;
+        .cta-row-one {
+            width: 60%;
+            h4 {
+                margin: 0;
+                margin-bottom: 1rem;
+                font-weight: 700;
+                font-size: 30px;
+                color: #ffffff;
+            }
+            p {
+                margin: 0;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: #B7B4B4;
+            }
+        }
+        .cta-button {
+            button {
+                font-weight: 700;
+                font-size: 14px;
+                color: #ffffff;
+                background: linear-gradient(92.06deg, #CD677F 28.43%, #05E8DA 127.81%);
+                border-radius: 30px;
+                border: none;
+                padding: 1rem 3rem;
+            }
+        }
+    }
 }
 
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
@@ -89,15 +126,6 @@
     box-shadow: none !important;
 }
 
-// .css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
-//     margin: 0 !important;
-// }
-
-// .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
-//     min-height: 0 !important;
-//     border-bottom: 1px solid black !important;
-// }
-
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
     background-color: transparent !important;
 }
@@ -106,4 +134,109 @@
     background: #FFFFFF !important;
     border: 2px solid #000000 !important;
     border-radius: 30px !important;
+}
+
+.css-ahj2mt-MuiTypography-root {
+    margin: 0;
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root  {
+    fill: #000000 !important;
+}
+
+.css-yw020d-MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+    .css-i4bv87-MuiSvgIcon-root  {
+        fill: #ffffff !important;
+    } 
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    max-height: 42px !important;
+    border: none !important;
+    background: black !important;
+    color: #ffffff !important;
+}
+
+.css-9l5vo-MuiCollapse-wrapperInner {
+    background: #ffffff !important;
+    border: 1px solid #DBDBDB !important;
+    border-radius: 30px !important;
+    padding: 0 2rem !important;
+}
+
+.css-15v22id-MuiAccordionDetails-root {
+    padding: 0 !important;
+}
+
+.css-55vwbm-MuiTimeline-root {
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+
+.css-ha3bif-MuiTimelineItem-root:before {
+    content: "";
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+    padding: 0 !important;
+}
+
+// .css-ha3bif-MuiTimelineItem-root {
+//     align-items: center !important;
+// }
+
+.css-v6mo1y-MuiTimelineDot-root {
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+    background-color: #515151;
+}
+
+[data-testid="PlayArrowIcon"] {
+    fill: #ffffff !important;
+}
+
+.body-course-item {
+    margin-top: -.7rem !important;
+}
+
+.module-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem 0 4rem;
+    .module-end-one {
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        img {
+            width: 226px;
+            height: 294px;
+        }
+    }
+    .module-end-two {
+        width: 70%;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        h4 {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 33px;
+            margin-bottom: 3rem;
+        }
+        button {
+            background: #000000;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            width: 25%;
+        }
+    }
 }
