@@ -1,0 +1,91 @@
+.DAO {
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .dao-box {
+        width: 45vw;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        background: #FCFCFC;
+        border: 1px solid #B6B6B6;
+        box-sizing: border-box;
+        border-radius: 30px;
+        padding: 2rem;
+        .back {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: .6rem;
+            span {
+                width: 4rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .4rem;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 12px;
+                border: 1px solid #B6B6B6;
+                cursor: pointer;
+            }
+        }
+        .dao-header {
+            margin-bottom: 2rem;
+            // h1 {}
+            p {
+                font-size: 14px;
+            }  
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .form-inputs {
+                margin-bottom: 3rem;
+                display: flex;
+                flex-direction: column;
+                .box {
+                    display: flex;
+                    flex-direction: column;
+                    margin: .7rem 0;
+                    label{
+                        opacity: .6;
+                    }
+                    input{
+                        width: 38vw;
+                        height: 30px;
+                        border-top-style: hidden;
+                        border-right-style: hidden;
+                        border-left-style: hidden;
+                        border-bottom-style: groove;
+                        padding: 0 .5rem;
+                        font-size: 14px;
+                        background-color: transparent;
+                        border-color: #DBDBDB;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            .actions {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                button {
+                    width: 50vh;
+                    color: #ffffff;
+                    background-color: #5F5C5C;
+                    border-radius: 30px;
+                    padding: 1rem 3rem;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

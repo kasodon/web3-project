@@ -1,0 +1,131 @@
+.learn {
+    height: max-content;
+    .learn-sketch {
+        height: 40rem;
+        min-width: 100%;
+        background: linear-gradient(92.06deg, rgba(205, 103, 127, 0.15) 28.43%, rgba(5, 232, 218, 0.15) 127.81%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 62vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 62vh, 0 100%);
+        z-index: 100;
+        // margin-top: -1.3rem;
+    }
+    .learn-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        position: relative;
+        margin-top: -36rem;
+        margin-bottom: 10rem;
+        .content-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4rem;
+            h2 {
+                font-weight: 700;
+                font-size: 40px;
+                text-transform: capitalize;
+                margin-bottom: .2rem;
+            }
+            p {
+                font-size: 14px;
+                line-height: 21px;
+                letter-spacing: -0.02em;
+                text-align: center;
+                // color: #A8A8A8;
+            }
+        }
+        .content-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: -3rem;
+            .content-body-box {
+                width: 297px;
+                height: 483px;
+                background: #fcfcfc;
+                margin-right: 3rem;
+                border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 3rem 2rem;
+                border: 1px solid #B6B6B6;
+                &.shadow {
+                    box-shadow: 0px 34px 40px rgba(0, 0, 0, 0.13) !important;
+                    background: #242424;
+                    color: #fcfcfc;
+                    border: none;
+                    button {
+                        background: #FCFCFC;
+                        color: #000000;
+                        border: none;
+                    }
+                    .list {
+                        ul {
+                            color: #fcfcfc;
+                        }
+                    }
+                }
+                .box-text {
+                    margin-bottom: 1.5rem;
+                    padding: 1rem;
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                    }
+                    p {
+                        margin-top: -.5rem;
+                        font-size: 14px;
+                    }
+                }
+                button {
+                    font-weight: 900;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #5F5C5C;
+                    padding: 1.2rem 4.6rem;
+                    border-radius: 30px;
+                    border: 1px solid #5F5C5C;
+                    background: none;
+                    margin-bottom: .8rem;
+                }
+                .list {
+                    padding: 1rem;
+                    h4 {
+                        font-size: 14px;
+                    }
+                    ul {
+                        font-size: 12px;
+                        color: #444444;
+                        line-height: 15px;
+                        list-style-type: "\2713";
+                        margin-left: -1.2rem;
+                        li {
+                            margin-bottom: .4rem;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    .pointy-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+        margin-bottom: -6.3rem;
+        margin-top: -16rem;
+        img {
+            grid-area: 3/3;
+            z-index: 1000;
+        }
+    }
+}
+
+  

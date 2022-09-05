@@ -1,14 +1,24 @@
 import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import './App.scss'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import indexRoutes from './routes/index'
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            </header>
-        </div>
+        <Router>
+            <Routes>
+                {indexRoutes.map((prop, key) => {
+                    console.log(prop.path)
+                    return (
+                        <Route
+                            path={prop.path}
+                            key={key}
+                            element={prop.component}
+                        ></Route>
+                    )
+                })}
+            </Routes>
+        </Router>
     )
 }
 

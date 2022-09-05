@@ -1,0 +1,61 @@
+.update {
+    height: max-content;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+.skill-display > span {
+    max-width: 152px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    margin-left: 1rem;
+    padding: 1rem;
+}
+
+.skill-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.skillz {
+    margin-bottom: 4rem;
+}
+
+.certification {
+    margin-bottom: 4rem;
+}
+.education {
+    margin-bottom: 4rem;
+}
+.years {
+    margin-bottom: 4rem;
+}
+.work {
+    margin-bottom: 4rem;
+}
+
+.save-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0 2rem 0;
+    button {
+        background-color: #5F5C5C;
+        color: #ffffff;
+        border-radius: 30px;
+        width: 20rem;
+        font-weight: 700;
+        padding: 1rem 3rem;
+        font-size: 18px;
+    }
+}
+
