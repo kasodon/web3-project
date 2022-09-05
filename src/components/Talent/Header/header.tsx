@@ -18,13 +18,13 @@ function Header() {
                             <a href="/">Dashboard</a>
                         </li>
                         <li>
-                            <a href="/">Courses</a>
+                            <a href="/">Learn to Earn</a>
                         </li>
                         <li>
                             <a href="/">Events</a>
                         </li>
                         <li>
-                            <a href="/">Marketplace</a>
+                            <a href="/">Work to Earn</a>
                         </li>
                     </ul>
                 </nav>
